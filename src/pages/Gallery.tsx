@@ -1,35 +1,46 @@
+import { useState } from "react";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import heroHome from "@/assets/hero-home.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
-import facilityInterior from "@/assets/facility-interior.jpg";
-import facilityYard from "@/assets/facility-yard.jpg";
-import facilityTraining from "@/assets/facility-training.jpg";
-import facilityHomeBoarding from "@/assets/facility-home-boarding.jpg";
-import serviceObedience from "@/assets/service-obedience.jpg";
-import serviceSocialization from "@/assets/service-socialization.jpg";
 
-const images = [
-  { src: gallery1, alt: "Psi na treningu", span: "col-span-2 row-span-2" },
-  { src: gallery2, alt: "Skok preko prepreke", span: "col-span-1" },
-  { src: facilityInterior, alt: "Unutrašnji hotel", span: "col-span-1" },
-  { src: gallery3, alt: "Belgijski ovčar", span: "col-span-1 row-span-2" },
-  { src: facilityYard, alt: "Dvorište za igru", span: "col-span-1" },
-  { src: gallery4, alt: "Šetnja sa psima", span: "col-span-1" },
-  { src: facilityTraining, alt: "Teren za obuku", span: "col-span-1" },
-  { src: serviceObedience, alt: "Obuka poslušnosti", span: "col-span-1" },
-  { src: gallery5, alt: "Psi u igri", span: "col-span-2" },
-  { src: serviceSocialization, alt: "Socijalizacija", span: "col-span-1" },
-  { src: facilityHomeBoarding, alt: "Kućni pansion", span: "col-span-1" },
-  { src: gallery6, alt: "Zaštitna obuka", span: "col-span-1" },
-];
+const categories = [
+  { key: "dresura", label: "Dresura" },
+  { key: "pansion", label: "Pansion" },
+  { key: "gosti", label: "Naši gosti" },
+  { key: "kucni", label: "Kućni smeštaj" },
+  { key: "dvoriste", label: "Dvorište" },
+] as const;
+
+type CategoryKey = (typeof categories)[number]["key"];
+
+// Placeholder images per category — replace src with real Instagram embed URLs
+const galleryData: Record<CategoryKey, { src: string; alt: string }[]> = {
+  dresura: Array.from({ length: 12 }, (_, i) => ({
+    src: `https://placehold.co/600x600/141414/C4922A?text=Dresura+${i + 1}`,
+    alt: `Dresura ${i + 1}`,
+  })),
+  pansion: Array.from({ length: 12 }, (_, i) => ({
+    src: `https://placehold.co/600x600/141414/C4922A?text=Pansion+${i + 1}`,
+    alt: `Pansion ${i + 1}`,
+  })),
+  gosti: Array.from({ length: 12 }, (_, i) => ({
+    src: `https://placehold.co/600x600/141414/C4922A?text=Gosti+${i + 1}`,
+    alt: `Naši gosti ${i + 1}`,
+  })),
+  kucni: Array.from({ length: 12 }, (_, i) => ({
+    src: `https://placehold.co/600x600/141414/C4922A?text=Kucni+${i + 1}`,
+    alt: `Kućni smeštaj ${i + 1}`,
+  })),
+  dvoriste: Array.from({ length: 12 }, (_, i) => ({
+    src: `https://placehold.co/600x600/141414/C4922A?text=Dvoriste+${i + 1}`,
+    alt: `Dvorište ${i + 1}`,
+  })),
+};
 
 const Gallery = () => {
+  const [active, setActive] = useState<CategoryKey>("dresura");
+  const images = galleryData[active];
+
   return (
     <>
       <HeroSection
@@ -41,21 +52,39 @@ const Gallery = () => {
       />
 
       <SectionWrapper>
+        {/* Category buttons */}
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
+          {categories.map((cat) => (
+            <button
+              key={cat.key}
+              onClick={() => setActive(cat.key)}
+              className={`px-6 py-2.5 rounded-sm font-heading text-sm uppercase tracking-widest transition-all duration-300 border ${
+                active === cat.key
+                  ? "bg-primary text-primary-foreground border-primary"
+                  : "bg-transparent text-muted-foreground border-border hover:border-primary hover:text-primary"
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Image grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
           {images.map((img, i) => (
-            <div key={i} className={`${img.span} overflow-hidden group`}>
+            <div key={`${active}-${i}`} className="overflow-hidden group aspect-square">
               <img
                 src={img.src}
                 alt={img.alt}
                 loading="lazy"
-                className="w-full h-full object-cover min-h-[200px] group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
           ))}
         </div>
+
         <p className="text-center font-body text-muted-foreground mt-8 text-sm">
-          {/* Placeholder: Replace with real photos from the facility */}
-          Fotografije su ilustrativne. Zamenite pravim fotografijama iz objekta.
+          Zamenite placeholder slike pravim linkovima sa Instagram profila.
         </p>
       </SectionWrapper>
     </>
