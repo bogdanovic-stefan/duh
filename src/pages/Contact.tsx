@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, MapPin, Mail, Instagram, Facebook } from "lucide-react";
+import { Phone, MapPin, Mail } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import heroContact from "@/assets/hero-contact.jpg";
@@ -75,14 +75,6 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="flex gap-4 mt-8">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center bg-gold/10 hover:bg-gold/20 transition-colors" aria-label="Instagram">
-                <Instagram className="w-5 h-5 text-gold" />
-              </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center bg-gold/10 hover:bg-gold/20 transition-colors" aria-label="Facebook">
-                <Facebook className="w-5 h-5 text-gold" />
-              </a>
-            </div>
           </div>
 
           {/* Form */}
