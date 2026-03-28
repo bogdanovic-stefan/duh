@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, MapPin, Mail } from "lucide-react";
+import { Phone, MapPin, Mail, Instagram, Facebook } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -12,6 +12,14 @@ const Footer = () => {
             <p className="text-sm text-dark-foreground/70 font-body leading-relaxed">
               Profesionalna dresura i pansion za pse. Vojnička preciznost, kućna toplina.
             </p>
+            <div className="flex gap-4 mt-6">
+              <a href="https://www.instagram.com/dresuraipansionzapseduhnovisad/" target="_blank" rel="noopener noreferrer" className="text-dark-foreground/60 hover:text-gold transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://www.facebook.com/dresura.pasa.duh" target="_blank" rel="noopener noreferrer" className="text-dark-foreground/60 hover:text-gold transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
           {/* Navigation */}
