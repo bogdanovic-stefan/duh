@@ -12,14 +12,6 @@ const Footer = () => {
             <p className="text-sm text-dark-foreground/70 font-body leading-relaxed">
               Profesionalna dresura i pansion za pse. Vojnička preciznost, kućna toplina.
             </p>
-            <div className="flex gap-4 mt-6">
-              <a href="https://www.instagram.com/dresuraipansionzapseduhnovisad/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-dark-foreground/60 hover:text-gold transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="https://www.facebook.com/dresura.pasa.duh/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-dark-foreground/60 hover:text-gold transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Navigation */}
