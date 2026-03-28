@@ -74,7 +74,7 @@ const Footer = () => {
       <div className="border-t border-dark-muted">
         <div className="container py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-dark-foreground/50 font-body">
           <p>© {new Date().getFullYear()} Dresura i pension za pse DUH. Sva prava zadržana.</p>
-          <p>Železnička 2, Bački Jarak</p>
+          <a href="https://github.com/bogdanovic-stefan" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Website by Stefan Bogdanović</a>
         </div>
       </div>
     </footer>
