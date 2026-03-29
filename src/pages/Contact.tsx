@@ -9,6 +9,7 @@ const Contact = () => {
     name: "",
     breed: "",
     service: "Pansion",
+    transport: false,
     dates: "",
     message: "",
   });
