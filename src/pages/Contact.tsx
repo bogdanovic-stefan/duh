@@ -64,15 +64,35 @@ const Contact = () => {
                 </div>
               </a>
 
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 flex items-center justify-center bg-gold/10">
+              <a href="https://maps.google.com/?q=Železnička+2,+Bački+Jarak" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+                <div className="w-12 h-12 flex items-center justify-center bg-gold/10 group-hover:bg-gold/20 transition-colors">
                   <MapPin className="w-5 h-5 text-gold" />
                 </div>
                 <div>
                   <p className="font-heading text-sm uppercase tracking-wider">Adresa</p>
                   <p className="font-body text-muted-foreground">Železnička 2, Bački Jarak</p>
                 </div>
-              </div>
+              </a>
+
+              <a href="https://www.instagram.com/dresuraipansionzapseduhnovisad/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+                <div className="w-12 h-12 flex items-center justify-center bg-gold/10 group-hover:bg-gold/20 transition-colors">
+                  <Instagram className="w-5 h-5 text-gold" />
+                </div>
+                <div>
+                  <p className="font-heading text-sm uppercase tracking-wider">Instagram</p>
+                  <p className="font-body text-muted-foreground">dresuraipansionzapseduh</p>
+                </div>
+              </a>
+
+              <a href="https://www.facebook.com/dresura.pasa.duh" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+                <div className="w-12 h-12 flex items-center justify-center bg-gold/10 group-hover:bg-gold/20 transition-colors">
+                  <Facebook className="w-5 h-5 text-gold" />
+                </div>
+                <div>
+                  <p className="font-heading text-sm uppercase tracking-wider">Facebook</p>
+                  <p className="font-body text-muted-foreground">Dresura i pansion za pse DUH</p>
+                </div>
+              </a>
             </div>
 
           </div>
