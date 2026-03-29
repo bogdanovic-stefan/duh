@@ -18,7 +18,7 @@ const Contact = () => {
     e.preventDefault();
     const subject = encodeURIComponent(`Upit - ${formData.service}`);
     const body = encodeURIComponent(
-      `Ime: ${formData.name}\nRasa/Starost: ${formData.breed}\nUsluga: ${formData.service}\nDatum: ${formData.dates}\n\nPoruka: ${formData.message}`
+      `Ime: ${formData.name}\nRasa/Starost: ${formData.breed}\nUsluga: ${formData.service}\nPrevoz: ${formData.transport ? "Da" : "Ne"}\nDatum: ${formData.dates}\n\nPoruka: ${formData.message}`
     );
     window.location.href = `mailto:dresuraipansionzapseduh@gmail.com?subject=${subject}&body=${body}`;
   };
