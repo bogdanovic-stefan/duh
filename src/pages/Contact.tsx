@@ -9,6 +9,7 @@ const Contact = () => {
     name: "",
     breed: "",
     service: "Pansion",
+    transport: false,
     dates: "",
     message: "",
   });
@@ -17,7 +18,7 @@ const Contact = () => {
     e.preventDefault();
     const subject = encodeURIComponent(`Upit - ${formData.service}`);
     const body = encodeURIComponent(
-      `Ime: ${formData.name}\nRasa/Starost: ${formData.breed}\nUsluga: ${formData.service}\nDatum: ${formData.dates}\n\nPoruka: ${formData.message}`
+      `Ime: ${formData.name}\nRasa/Starost: ${formData.breed}\nUsluga: ${formData.service}\nPrevoz: ${formData.transport ? "Da" : "Ne"}\nDatum: ${formData.dates}\n\nPoruka: ${formData.message}`
     );
     window.location.href = `mailto:dresuraipansionzapseduh@gmail.com?subject=${subject}&body=${body}`;
   };
@@ -140,9 +141,19 @@ const Contact = () => {
                 >
                   <option>Pansion</option>
                   <option>Obuka</option>
-                  <option>Prevoz</option>
                   <option>Pansion + Obuka</option>
                 </select>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <input
+                  type="checkbox"
+                  id="transport"
+                  checked={formData.transport}
+                  onChange={(e) => setFormData({ ...formData, transport: e.target.checked })}
+                  className="w-4 h-4 accent-gold"
+                />
+                <label htmlFor="transport" className="font-heading text-xs uppercase tracking-wider cursor-pointer">Prevoz</label>
               </div>
 
               <div>
