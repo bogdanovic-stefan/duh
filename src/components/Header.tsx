@@ -58,13 +58,13 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
-          <Link
-            to="/kontakt"
+          <a
+            href="tel:+381638003865"
             className="flex items-center gap-2 bg-gold px-5 py-2.5 font-heading text-sm uppercase tracking-wider text-primary-foreground hover:bg-gold-dark transition-colors"
           >
             <Phone className="w-4 h-4" />
             Rezervacija
-          </Link>
+          </a>
         </nav>
 
         {/* Mobile Toggle */}
@@ -94,13 +94,13 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <Link
-              to="/kontakt"
+            <a
+              href="tel:+381638003865"
               className="flex items-center justify-center gap-2 bg-gold px-5 py-3 mt-2 font-heading text-sm uppercase tracking-wider text-primary-foreground"
             >
               <Phone className="w-4 h-4" />
               Rezervacija
-            </Link>
+            </a>
           </div>
         </nav>
       )}
