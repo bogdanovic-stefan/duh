@@ -72,10 +72,10 @@ const Index = () => {
             <Mail className="w-6 h-6 text-gold" />
             <span className="font-heading text-sm uppercase tracking-wider text-center break-all">dresuraipansionzapseduh@gmail.com</span>
           </a>
-          <div className="flex flex-col items-center gap-2 p-6">
+          <a href="https://maps.google.com/?q=Železnička+2,+Bački+Jarak" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 p-6 rounded-lg hover:bg-muted transition-colors">
             <MapPin className="w-6 h-6 text-gold" />
             <span className="font-heading text-sm uppercase tracking-wider">Železnička 2, Bački Jarak</span>
-          </div>
+          </a>
         </div>
       </SectionWrapper>
 

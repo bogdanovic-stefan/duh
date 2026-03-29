@@ -52,10 +52,10 @@ const Footer = () => {
                 <Mail className="w-4 h-4 text-gold" />
                 dresuraipansionzapseduh@gmail.com
               </a>
-              <div className="flex items-start gap-2">
+              <a href="https://maps.google.com/?q=Železnička+2,+Bački+Jarak" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 hover:text-gold transition-colors">
                 <MapPin className="w-4 h-4 text-gold mt-0.5 shrink-0" />
                 <span>Železnička 2, Bački Jarak</span>
-              </div>
+              </a>
             </div>
           </div>
 
