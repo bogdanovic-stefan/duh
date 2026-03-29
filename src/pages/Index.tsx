@@ -47,9 +47,11 @@ const Index = () => {
       {/* Quick Info Bar */}
       <div className="bg-gold">
         <div className="container py-4 flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 text-primary-foreground">
+          <span className="font-heading text-sm uppercase tracking-widest">Dresura</span>
+          <span className="font-heading text-sm uppercase tracking-widest">Pansion</span>
           <span className="font-heading text-sm uppercase tracking-widest">Profesionalni poligon</span>
-          <span className="font-body text-sm">Nadzor 24/7</span>
-          <span className="font-body text-sm">Usluga prevoza pasa</span>
+          <span className="font-heading text-sm uppercase tracking-widest">Nadzor 24/7</span>
+          <span className="font-heading text-sm uppercase tracking-widest">Usluga prevoza pasa</span>
         </div>
       </div>
 
