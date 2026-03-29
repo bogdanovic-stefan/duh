@@ -55,11 +55,7 @@ const Services = () => {
           {pricingData.map((p) => (
             <div
               key={p.breed}
-              className={`text-center p-8 border-2 transition-all hover:scale-105 ${
-                p.highlight
-                  ? "border-gold bg-gold/5 shadow-lg"
-                  : "border-border hover:border-gold"
-              }`}
+              className="text-center p-8 border-2 border-gold bg-gold/5 shadow-lg transition-all hover:scale-105"
             >
               <h3 className="font-heading text-xl uppercase tracking-wider">{p.breed}</h3>
               <div className="mt-4">
