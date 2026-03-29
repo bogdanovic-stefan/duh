@@ -86,13 +86,13 @@ const Index = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           {facilities.map((f) => (
-            <div key={f.title} className="group overflow-hidden">
+            <div key={f.title} className="group overflow-hidden flex flex-col h-full">
               <div className="aspect-[4/3] overflow-hidden">
                 <img src={f.image} alt={f.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <div className="p-5 bg-dark-muted">
+              <div className="p-5 bg-dark-muted flex-1 flex flex-col">
                 <div className="flex items-center gap-2 mb-2">
-                  <f.icon className="w-5 h-5 text-gold" />
+                  <f.icon className="w-5 h-5 text-gold shrink-0" />
                   <h3 className="font-heading text-lg uppercase tracking-wider">{f.title}</h3>
                 </div>
                 <p className="font-body text-sm text-dark-foreground/70">{f.desc}</p>
