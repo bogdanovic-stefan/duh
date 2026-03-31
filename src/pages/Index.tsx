@@ -45,8 +45,8 @@ const Index = () => {
       />
 
       {/* Quick Info Bar */}
-      <div className="bg-gold">
-        <div className="container py-4 flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 text-primary-foreground">
+      <div className="hidden md:block bg-gold">
+        <div className="container py-4 flex flex-row justify-center items-center gap-12 text-primary-foreground">
           <span className="font-heading text-sm uppercase tracking-widest">Dresura</span>
           <span className="font-heading text-sm uppercase tracking-widest">Pansion</span>
           <span className="font-heading text-sm uppercase tracking-widest">Profesionalni poligon</span>
