@@ -165,7 +165,7 @@ const Index = () => {
             <img src={trainerPortrait} alt="Milan - profesionalni dreser" loading="lazy" className="w-full h-full object-cover" />
           </div>
           <div>
-            <p className="font-heading text-sm uppercase tracking-widest text-gold mb-2">Upoznajte dresera</p>
+            <p className="font-heading text-sm uppercase tracking-widest text-gold my-0 mx-0 mb-[20px]">Upoznajte dresera</p>
             <h2 className="font-script text-5xl md:text-6xl text-gold">Milan</h2>
             <p className="font-body text-lg text-muted-foreground mt-6 leading-relaxed">
               Profesionalni dreser sa karijerom građenom u Vojsci Srbije. Kao dugogodišnji vodič službenih pasa, Milan donosi najviše standarde discipline, sigurnosti i stručnosti u rad sa vašim ljubimcima.
