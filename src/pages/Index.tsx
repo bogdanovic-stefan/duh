@@ -67,7 +67,7 @@ const Index = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 text-center">
           <a href="tel:+381638003865" className="flex flex-col items-center gap-2 p-6 rounded-lg hover:bg-muted transition-colors">
-            <span className="font-heading text-xs uppercase tracking-widest text-gold mb-1">Kontakt</span>
+            <span className="font-heading text-sm uppercase tracking-widest text-gold mb-1">Kontakt</span>
             <Phone className="w-6 h-6 text-gold" />
             <span className="font-heading text-sm uppercase tracking-wider">063 800 3865</span>
           </a>
