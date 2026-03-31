@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Instagram, Facebook } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import heroHome from "@/assets/hero-home.jpg";
@@ -83,6 +84,32 @@ const Gallery = () => {
           ))}
         </div>
 
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <div className="text-center">
+          <p className="font-body text-lg text-muted-foreground mb-6">
+            Zapratite nas na Instagramu i Facebooku za još fotografija i novosti.
+          </p>
+          <div className="flex justify-center gap-6">
+            <a
+              href="https://www.instagram.com/dresuraipansionzapseduhnovisad/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Instagram className="w-8 h-8" />
+            </a>
+            <a
+              href="https://www.facebook.com/dresura.pasa.duh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Facebook className="w-8 h-8" />
+            </a>
+          </div>
+        </div>
       </SectionWrapper>
     </>
   );
