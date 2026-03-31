@@ -65,7 +65,7 @@ const Contact = () => {
                 </div>
               </a>
 
-              <a href="https://maps.google.com/?q=Železnička+2,+Bački+Jarak" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+              <a href="https://www.google.com/maps/place/Dresura+pasa+DUH/@45.3710946,19.8660011,17z/data=!4m15!1m8!3m7!1s0x475b16182f2680ff:0x4ddaed4ae917690c!2zxb1lbGV6bmnEjWthIDIsIEJhxI1raSBKYXJhayAyMTIzNA!3b1!8m2!3d45.3710946!4d19.8660011!16s%2Fg%2F11wb1nffrh!3m5!1s0x475b111aafb5170d:0xc25f272da0f5f94e!8m2!3d45.3711133!4d19.8659121!16s%2Fg%2F11z1hsywcj?hl=en-GB&entry=ttu" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 flex items-center justify-center bg-gold/10 group-hover:bg-gold/20 transition-colors">
                   <MapPin className="w-5 h-5 text-gold" />
                 </div>
@@ -196,7 +196,7 @@ const Contact = () => {
         </h2>
         <div className="aspect-video w-full max-w-5xl mx-auto">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800!2d19.87!3d45.37!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zxb1lbGV6bmnEjWthIDIsIEJhxI1raSBKYXJhaw!5e0!3m2!1ssr!2srs!4v1"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800!2d19.8660011!3d45.3710946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b111aafb5170d:0xc25f272da0f5f94e!2sDresura+pasa+DUH!5e0!3m2!1ssr!2srs!4v1"
             width="100%"
             height="100%"
             style={{ border: 0 }}
