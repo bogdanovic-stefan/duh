@@ -83,9 +83,6 @@ const Gallery = () => {
           ))}
         </div>
 
-        <p className="text-center font-body text-muted-foreground mt-8 text-sm">
-          Zamenite placeholder slike pravim linkovima sa Instagram profila.
-        </p>
       </SectionWrapper>
     </>
   );
