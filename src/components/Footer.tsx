@@ -52,7 +52,7 @@ const Footer = () => {
                 <Mail className="w-4 h-4 text-gold" />
                 dresuraipansionzapseduh@gmail.com
               </a>
-              <a href="https://maps.google.com/?q=Železnička+2,+Bački+Jarak" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 hover:text-gold transition-colors">
+              <a href="https://www.google.com/maps/place/Dresura+pasa+DUH/@45.3710946,19.8660011,17z/data=!4m15!1m8!3m7!1s0x475b16182f2680ff:0x4ddaed4ae917690c!2zxb1lbGV6bmnEjWthIDIsIEJhxI1raSBKYXJhayAyMTIzNA!3b1!8m2!3d45.3710946!4d19.8660011!16s%2Fg%2F11wb1nffrh!3m5!1s0x475b111aafb5170d:0xc25f272da0f5f94e!8m2!3d45.3711133!4d19.8659121!16s%2Fg%2F11z1hsywcj?hl=en-GB&entry=ttu" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 hover:text-gold transition-colors">
                 <MapPin className="w-4 h-4 text-gold mt-0.5 shrink-0" />
                 <span>Železnička 2, Bački Jarak</span>
               </a>
