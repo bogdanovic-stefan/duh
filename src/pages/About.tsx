@@ -40,7 +40,7 @@ const About = () => {
             <h2 className="font-script text-5xl md:text-6xl text-gold mb-6">Milan</h2>
             <div className="space-y-5 font-body text-dark-foreground/80 leading-relaxed">
               <p>
-                Profesionalni dreser sa karijerom građenom u Vojsci Srbije. Kao dugogodišnji vodič službenih pasa, Milan donosi najviše standarde discipline, sigurnosti i stručnosti u rad sa vašim ljubimcima. Svaki trening u centru "DUH" zasnovan je na iskustvu gde su preciznost i poverenje ključ uspeha.
+                Profesionalni dreser sa karijerom građenom u vojnoj policiji. Kao dugogodišnji vodič službenih pasa, Milan donosi najviše standarde discipline, sigurnosti i stručnosti u rad sa vašim ljubimcima. Svaki trening u centru "DUH" zasnovan je na iskustvu gde su preciznost i poverenje ključ uspeha.
               </p>
               <p>
                 Srce ovog pansiona i razlog za njegovo ime je Duh – moj službeni pas sa kojim sam prošao kroz najteže vojničke zadatke. On nije bio samo radni pas, već partner koji me je naučio da se vrhunski rezultati postižu isključivo kroz uzajamno poštovanje i nepokolebljivu disciplinu.
