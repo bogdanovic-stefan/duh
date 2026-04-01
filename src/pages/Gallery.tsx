@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Instagram, Facebook } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
-import heroHome from "@/assets/hero-home.jpg";
+import heroAbout from "@/assets/hero-about.jpg";
 
 const categories = [
   { key: "dresura", label: "Dresura" },
@@ -50,7 +50,7 @@ const Gallery = () => {
         <meta name="description" content="Pogledajte fotografije iz centra DUH – dresura, pansion, dvorište i srećni psi. Pratite nas na Instagramu i Facebooku." />
       </Helmet>
       <HeroSection
-        image={heroHome}
+        image={heroAbout}
         title="Galerija"
         subtitle="Pogledajte naš prostor, treninge i srećne pse"
         height="medium"

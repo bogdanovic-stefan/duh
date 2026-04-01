@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, MapPin, Mail, Instagram, Facebook } from "lucide-react";
+import logoDuh from "@/assets/logo-duh.webp";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <h3 className="font-heading text-2xl font-bold tracking-wider mb-4">DUH</h3>
+            <img src={logoDuh} alt="DUH - Dresura i pansion za pse" className="h-14 w-auto mb-4" />
             <p className="text-sm text-dark-foreground/70 font-body leading-relaxed">
               Profesionalna dresura i pansion za pse. Vojnička preciznost, kućna toplina.
             </p>
@@ -20,6 +21,7 @@ const Footer = () => {
                 <Facebook className="w-5 h-5" />
               </a>
             </div>
+            <p className="text-xs text-dark-foreground/50 font-body mt-3">PIB: 115259625</p>
           </div>
 
           {/* Navigation */}
@@ -73,7 +75,7 @@ const Footer = () => {
 
       <div className="border-t border-dark-muted">
         <div className="container py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-dark-foreground/50 font-body">
-          <p>© {new Date().getFullYear()} Dresura i pansion za pse DUH. Sva prava zadržana. | PIB: 115259625</p>
+          <p>© {new Date().getFullYear()} Dresura i pansion za pse DUH. Sva prava zadržana.</p>
           <a href="https://github.com/bogdanovic-stefan" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Website by Stefan Bogdanović</a>
         </div>
       </div>
