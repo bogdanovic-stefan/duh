@@ -43,7 +43,7 @@ const About = () => {
                 Profesionalni dreser sa karijerom građenom u vojnoj policiji. Kao dugogodišnji vodič službenih pasa, Milan donosi najviše standarde discipline, sigurnosti i stručnosti u rad sa vašim ljubimcima. Svaki trening u centru "DUH" zasnovan je na iskustvu gde su preciznost i poverenje ključ uspeha.
               </p>
               <p>
-                Srce ovog pansiona i razlog za njegovo ime je Duh – moj službeni pas sa kojim sam prošao kroz najteže vojničke zadatke. On nije bio samo radni pas, već partner koji me je naučio da se vrhunski rezultati postižu isključivo kroz uzajamno poštovanje i nepokolebljivu disciplinu.
+                Srce ovog pansiona i razlog za njegovo ime je Duh – moj službeni pas sa kojim sam prošao kroz najteže vojno-policijske zadatke. On nije bio samo radni pas, već partner koji me je naučio da se vrhunski rezultati postižu isključivo kroz uzajamno poštovanje i nepokolebljivu disciplinu.
               </p>
               <p>
                 Danas, kroz "Dresura i pension za pse Duh", tu istu posvećenost i vojničku preciznost prenosim na rad sa vašim ljubimcima. Naš pristup nije samo obično čuvanje pasa – to je sistematska briga o njihovom fizičkom i mentalnom stanju, u uslovima koji simuliraju toplinu doma, ali zadržavaju najviše standarde bezbednosti.
