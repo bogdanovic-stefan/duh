@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { Instagram, Facebook } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
