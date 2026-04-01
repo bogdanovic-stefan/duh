@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
+import logoDuh from "@/assets/logo-duh.webp";
 
 const navLinks = [
   { to: "/", label: "Početna" },
@@ -35,12 +36,7 @@ const Header = () => {
     >
       <div className="container flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-2">
-          <span className="font-heading text-2xl md:text-3xl font-bold tracking-wider text-dark-foreground">
-            DUH
-          </span>
-          <span className="hidden sm:block text-xs font-body uppercase tracking-widest text-gold">
-            Dresura & Pansion
-          </span>
+          <img src={logoDuh} alt="DUH - Dresura i pansion za pse" className="h-12 md:h-14 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
