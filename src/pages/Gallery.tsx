@@ -86,7 +86,7 @@ const Gallery = () => {
 
       </SectionWrapper>
 
-      <SectionWrapper>
+      <div className="container pb-16 -mt-8">
         <div className="text-center">
           <p className="font-body text-lg text-muted-foreground mb-6">
             Zapratite nas na Instagramu i Facebooku za još fotografija i novosti.
