@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { Phone, MapPin, Mail, Instagram, Facebook } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
@@ -25,10 +26,14 @@ const Contact = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Kontakt – DUH Dresura i pansion za pse | Novi Sad</title>
+        <meta name="description" content="Kontaktirajte centar DUH za dresuru i pansion za pse. Telefon, email, adresa i kontakt forma za rezervacije." />
+      </Helmet>
       <HeroSection
         image={heroContact}
         title="Kontakt"
-        subtitle="Dresura, pension, rezervacija — pišite kad god."
+        subtitle="Dresura, pansion, rezervacija — pišite kad god."
         height="medium"
         overlay="medium"
       />

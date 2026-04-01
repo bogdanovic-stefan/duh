@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { Instagram, Facebook } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
@@ -44,6 +45,10 @@ const Gallery = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Galerija – DUH Dresura i pansion za pse | Novi Sad</title>
+        <meta name="description" content="Pogledajte fotografije iz centra DUH – dresura, pansion, dvorište i srećni psi. Pratite nas na Instagramu i Facebooku." />
+      </Helmet>
       <HeroSection
         image={heroHome}
         title="Galerija"
@@ -86,7 +91,7 @@ const Gallery = () => {
 
       </SectionWrapper>
 
-      <SectionWrapper>
+      <div className="container pb-16 -mt-8">
         <div className="text-center">
           <p className="font-body text-lg text-muted-foreground mb-6">
             Zapratite nas na Instagramu i Facebooku za još fotografija i novosti.
@@ -110,7 +115,7 @@ const Gallery = () => {
             </a>
           </div>
         </div>
-      </SectionWrapper>
+      </div>
     </>
   );
 };

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Shield, Sparkles, Eye } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
@@ -14,6 +15,10 @@ const values = [
 const About = () => {
   return (
     <>
+      <Helmet>
+        <title>O nama – DUH Dresura i pansion za pse | Novi Sad</title>
+        <meta name="description" content="Upoznajte Milana, profesionalnog dresera sa iskustvom u vojnoj policiji. Saznajte više o centru DUH i našem pristupu dresuri i pansionskom smeštaju pasa." />
+      </Helmet>
       <HeroSection
         image={heroAbout}
         title="O nama"
@@ -40,13 +45,13 @@ const About = () => {
             <h2 className="font-script text-5xl md:text-6xl text-gold mb-6">Milan</h2>
             <div className="space-y-5 font-body text-dark-foreground/80 leading-relaxed">
               <p>
-                Profesionalni dreser sa karijerom građenom u Vojsci Srbije. Kao dugogodišnji vodič službenih pasa, Milan donosi najviše standarde discipline, sigurnosti i stručnosti u rad sa vašim ljubimcima. Svaki trening u centru "DUH" zasnovan je na iskustvu gde su preciznost i poverenje ključ uspeha.
+                Profesionalni dreser sa karijerom građenom u vojnoj policiji. Kao dugogodišnji vodič službenih pasa, Milan donosi najviše standarde discipline, sigurnosti i stručnosti u rad sa vašim ljubimcima. Svaki trening u centru "DUH" zasnovan je na iskustvu gde su preciznost i poverenje ključ uspeha.
               </p>
               <p>
-                Srce ovog pansiona i razlog za njegovo ime je Duh – moj službeni pas sa kojim sam prošao kroz najteže vojničke zadatke. On nije bio samo radni pas, već partner koji me je naučio da se vrhunski rezultati postižu isključivo kroz uzajamno poštovanje i nepokolebljivu disciplinu.
+                Srce ovog pansiona i razlog za njegovo ime je Duh – moj službeni pas sa kojim sam prošao kroz najteže vojno-policijske zadatke. On nije bio samo radni pas, već partner koji me je naučio da se vrhunski rezultati postižu isključivo kroz uzajamno poštovanje i nepokolebljivu disciplinu.
               </p>
               <p>
-                Danas, kroz "Dresura i pension za pse Duh", tu istu posvećenost i vojničku preciznost prenosim na rad sa vašim ljubimcima. Naš pristup nije samo obično čuvanje pasa – to je sistematska briga o njihovom fizičkom i mentalnom stanju, u uslovima koji simuliraju toplinu doma, ali zadržavaju najviše standarde bezbednosti.
+                Danas, kroz "Dresura i pansion za pse Duh", tu istu posvećenost i vojničku preciznost prenosim na rad sa vašim ljubimcima. Naš pristup nije samo obično čuvanje pasa – to je sistematska briga o njihovom fizičkom i mentalnom stanju, u uslovima koji simuliraju toplinu doma, ali zadržavaju najviše standarde bezbednosti.
               </p>
             </div>
           </div>

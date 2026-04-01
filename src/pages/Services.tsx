@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -36,10 +37,14 @@ const trainingPrograms = [
 const Services = () => {
   return (
     <>
+      <Helmet>
+        <title>Usluge i cenovnik – DUH Dresura i pansion za pse | Novi Sad</title>
+        <meta name="description" content="Pogledajte cenovnik pansiona i programe dresure pasa u centru DUH. Socijalizacija, osnovna poslušnost, napad i odbrana." />
+      </Helmet>
       <HeroSection
         image={heroHome}
         title="Usluge i cenovnik"
-        subtitle="Cenovnik i programi — Dresura i pension za pse Duh"
+        subtitle="Cenovnik i programi — Dresura i pansion za pse Duh"
         height="large"
         overlay="dark"
       />

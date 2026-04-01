@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Shield, Home, TreePine, Target, Phone, MapPin, Mail, Truck, Car, ParkingCircle } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
@@ -34,9 +35,13 @@ const directions = [
 const Index = () => {
   return (
     <>
+      <Helmet>
+        <title>DUH – Dresura i pansion za pse | Novi Sad</title>
+        <meta name="description" content="Profesionalna dresura i pansion za pse u blizini Novog Sada. Hotel za pse, obuka, socijalizacija, kućni smeštaj i prevoz." />
+      </Helmet>
       <HeroSection
         image={heroDogPortrait}
-        title="Dresura i pension za pse"
+        title="Dresura i pansion za pse"
         scriptText="Duh"
         subtitle="Sigurno mesto za vašeg psa – profesionalna dresura, hotel za pse, kućni smeštaj i veliko dvorište."
         ctaLabel="Rezerviši smeštaj"
@@ -168,7 +173,7 @@ const Index = () => {
             <p className="font-heading text-sm uppercase tracking-widest text-gold my-0 mx-0 mb-[20px]">Upoznajte dresera</p>
             <h2 className="font-script text-5xl md:text-6xl text-gold">Milan</h2>
             <p className="font-body text-lg text-muted-foreground mt-6 leading-relaxed">
-              Profesionalni dreser sa karijerom građenom u Vojsci Srbije. Kao dugogodišnji vodič službenih pasa, Milan donosi najviše standarde discipline, sigurnosti i stručnosti u rad sa vašim ljubimcima.
+              Profesionalni dreser sa karijerom građenom u vojnoj policiji. Kao dugogodišnji vodič službenih pasa, Milan donosi najviše standarde discipline, sigurnosti i stručnosti u rad sa vašim ljubimcima.
             </p>
             <p className="font-body text-lg text-muted-foreground mt-4 leading-relaxed">
               Svaki trening u centru "DUH" zasnovan je na iskustvu gde su preciznost i poverenje ključ uspeha.
