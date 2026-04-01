@@ -25,7 +25,10 @@ const Contact = () => {
   };
 
   return (
-    <>
+      <Helmet>
+        <title>Kontakt – DUH Dresura i pansion za pse | Novi Sad</title>
+        <meta name="description" content="Kontaktirajte centar DUH za dresuru i pansion za pse. Telefon, email, adresa i kontakt forma za rezervacije." />
+      </Helmet>
       <HeroSection
         image={heroContact}
         title="Kontakt"
