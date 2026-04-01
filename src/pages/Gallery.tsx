@@ -110,7 +110,7 @@ const Gallery = () => {
             </a>
           </div>
         </div>
-      </SectionWrapper>
+      </div>
     </>
   );
 };

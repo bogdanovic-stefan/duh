@@ -39,7 +39,7 @@ const Services = () => {
       <HeroSection
         image={heroHome}
         title="Usluge i cenovnik"
-        subtitle="Cenovnik i programi — Dresura i pension za pse Duh"
+        subtitle="Cenovnik i programi — Dresura i pansion za pse Duh"
         height="large"
         overlay="dark"
       />

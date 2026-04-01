@@ -28,7 +28,7 @@ const Contact = () => {
       <HeroSection
         image={heroContact}
         title="Kontakt"
-        subtitle="Dresura, pension, rezervacija — pišite kad god."
+        subtitle="Dresura, pansion, rezervacija — pišite kad god."
         height="medium"
         overlay="medium"
       />

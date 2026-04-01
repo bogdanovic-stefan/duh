@@ -168,7 +168,7 @@ const Index = () => {
             <p className="font-heading text-sm uppercase tracking-widest text-gold my-0 mx-0 mb-[20px]">Upoznajte dresera</p>
             <h2 className="font-script text-5xl md:text-6xl text-gold">Milan</h2>
             <p className="font-body text-lg text-muted-foreground mt-6 leading-relaxed">
-              Profesionalni dreser sa karijerom građenom u Vojsci Srbije. Kao dugogodišnji vodič službenih pasa, Milan donosi najviše standarde discipline, sigurnosti i stručnosti u rad sa vašim ljubimcima.
+              Profesionalni dreser sa karijerom građenom u vojnoj policiji. Kao dugogodišnji vodič službenih pasa, Milan donosi najviše standarde discipline, sigurnosti i stručnosti u rad sa vašim ljubimcima.
             </p>
             <p className="font-body text-lg text-muted-foreground mt-4 leading-relaxed">
               Svaki trening u centru "DUH" zasnovan je na iskustvu gde su preciznost i poverenje ključ uspeha.

@@ -46,7 +46,7 @@ const About = () => {
                 Srce ovog pansiona i razlog za njegovo ime je Duh – moj službeni pas sa kojim sam prošao kroz najteže vojno-policijske zadatke. On nije bio samo radni pas, već partner koji me je naučio da se vrhunski rezultati postižu isključivo kroz uzajamno poštovanje i nepokolebljivu disciplinu.
               </p>
               <p>
-                Danas, kroz "Dresura i pension za pse Duh", tu istu posvećenost i vojničku preciznost prenosim na rad sa vašim ljubimcima. Naš pristup nije samo obično čuvanje pasa – to je sistematska briga o njihovom fizičkom i mentalnom stanju, u uslovima koji simuliraju toplinu doma, ali zadržavaju najviše standarde bezbednosti.
+                Danas, kroz "Dresura i pansion za pse Duh", tu istu posvećenost i vojničku preciznost prenosim na rad sa vašim ljubimcima. Naš pristup nije samo obično čuvanje pasa – to je sistematska briga o njihovom fizičkom i mentalnom stanju, u uslovima koji simuliraju toplinu doma, ali zadržavaju najviše standarde bezbednosti.
               </p>
             </div>
           </div>
