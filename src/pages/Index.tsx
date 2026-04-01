@@ -36,7 +36,7 @@ const Index = () => {
     <>
       <HeroSection
         image={heroDogPortrait}
-        title="Dresura i pension za pse"
+        title="Dresura i pansion za pse"
         scriptText="Duh"
         subtitle="Sigurno mesto za vašeg psa – profesionalna dresura, hotel za pse, kućni smeštaj i veliko dvorište."
         ctaLabel="Rezerviši smeštaj"
