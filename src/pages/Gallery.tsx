@@ -50,7 +50,7 @@ const Gallery = () => {
         <meta name="description" content="Pogledajte fotografije iz centra DUH – dresura, pansion, dvorište i srećni psi. Pratite nas na Instagramu i Facebooku." />
       </Helmet>
       <HeroSection
-        image={heroHome}
+        image={heroAbout}
         title="Galerija"
         subtitle="Pogledajte naš prostor, treninge i srećne pse"
         height="medium"
