@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Shield, Home, TreePine, Target, Phone, MapPin, Mail, Truck, Car, ParkingCircle } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
