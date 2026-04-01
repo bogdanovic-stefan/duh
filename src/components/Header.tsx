@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
+import logoDuh from "@/assets/logo-duh.webp";
 
 const navLinks = [
   { to: "/", label: "Početna" },
