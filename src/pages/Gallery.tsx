@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Instagram, Facebook } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
-import heroHome from "@/assets/hero-home.jpg";
+import heroAbout from "@/assets/hero-about.jpg";
 
 const categories = [
   { key: "dresura", label: "Dresura" },
