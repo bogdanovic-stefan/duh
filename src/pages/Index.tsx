@@ -34,6 +34,7 @@ const directions = [
 
 const Index = () => {
   return (
+    <>
       <Helmet>
         <title>DUH – Dresura i pansion za pse | Novi Sad</title>
         <meta name="description" content="Profesionalna dresura i pansion za pse u blizini Novog Sada. Hotel za pse, obuka, socijalizacija, kućni smeštaj i prevoz." />

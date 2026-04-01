@@ -14,6 +14,7 @@ const values = [
 
 const About = () => {
   return (
+    <>
       <Helmet>
         <title>O nama – DUH Dresura i pansion za pse | Novi Sad</title>
         <meta name="description" content="Upoznajte Milana, profesionalnog dresera sa iskustvom u vojnoj policiji. Saznajte više o centru DUH i našem pristupu dresuri i pansionskom smeštaju pasa." />

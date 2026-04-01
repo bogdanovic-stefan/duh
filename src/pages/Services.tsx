@@ -36,6 +36,7 @@ const trainingPrograms = [
 
 const Services = () => {
   return (
+    <>
       <Helmet>
         <title>Usluge i cenovnik – DUH Dresura i pansion za pse | Novi Sad</title>
         <meta name="description" content="Pogledajte cenovnik pansiona i programe dresure pasa u centru DUH. Socijalizacija, osnovna poslušnost, napad i odbrana." />

@@ -44,6 +44,7 @@ const Gallery = () => {
   const images = galleryData[active];
 
   return (
+    <>
       <Helmet>
         <title>Galerija – DUH Dresura i pansion za pse | Novi Sad</title>
         <meta name="description" content="Pogledajte fotografije iz centra DUH – dresura, pansion, dvorište i srećni psi. Pratite nas na Instagramu i Facebooku." />
