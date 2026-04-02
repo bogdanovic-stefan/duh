@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Shield, Home, TreePine, Target, Phone, MapPin, Mail, Truck, Car, ParkingCircle } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import heroDogPortrait from "@/assets/hero-dog-portrait.jpg";
 import trainerPortrait from "@/assets/trainer-portrait.jpg";
 import facilityInterior from "@/assets/facility-interior.jpg";
@@ -184,6 +185,9 @@ const Index = () => {
           </div>
         </div>
       </SectionWrapper>
+
+      {/* Testimonials */}
+      <TestimonialsSection />
 
       {/* CTA Section */}
       <section className="bg-gold py-16">
