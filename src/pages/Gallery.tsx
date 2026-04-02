@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useState, useEffect, useRef } from "react";
 import { Instagram, Facebook } from "lucide-react";
+import TikTokIcon from "@/components/TikTokIcon";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import heroAbout from "@/assets/hero-about.jpg";
