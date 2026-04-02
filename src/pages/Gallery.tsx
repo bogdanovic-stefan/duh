@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Instagram, Facebook } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -7,27 +7,43 @@ import heroAbout from "@/assets/hero-about.jpg";
 
 type Tab = "slike" | "snimci";
 
-// Placeholder images for pansion — replace with real photos later
 const pansionImages = Array.from({ length: 12 }, (_, i) => ({
   src: `https://placehold.co/600x600/141414/C4922A?text=Pansion+${i + 1}`,
   alt: `Pansion ${i + 1}`,
 }));
 
-const reelsEmbeds = [
-  "https://www.instagram.com/reel/DVtB7wzjNJZ/?utm_source=ig_embed",
-  "https://www.instagram.com/reel/DVYn_8ADd41/?utm_source=ig_embed",
-  "https://www.instagram.com/reel/DUYlmrSDZYK/?utm_source=ig_embed",
-  "https://www.instagram.com/reel/DSnCPsBjZqZ/?utm_source=ig_embed",
-  "https://www.instagram.com/reel/DRQMx0fjVWT/?utm_source=ig_embed",
-  "https://www.instagram.com/reel/DPljMdtjUmV/?utm_source=ig_embed",
-  "https://www.instagram.com/reel/DPgUlqnjdmp/?utm_source=ig_embed",
-  "https://www.instagram.com/reel/DMyCrMhNEr3/?utm_source=ig_embed",
-  "https://www.instagram.com/reel/DKkZBEMNLsO/?utm_source=ig_embed",
-  "https://www.instagram.com/reel/DGdSJJvNveo/?utm_source=ig_embed",
+const reelIds = [
+  "DRQMx0fjVWT",
+  "DPgUlqnjdmp",
+  "DSnCPsBjZqZ",
+  "DVtB7wzjNJZ",
+  "DVYn_8ADd41",
+  "DPljMdtjUmV",
+  "DGdSJJvNveo",
+  "DKkZBEMNLsO",
+  "DUYlmrSDZYK",
+  "DMyCrMhNEr3",
 ];
 
 const Gallery = () => {
   const [active, setActive] = useState<Tab>("slike");
+  const embedContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (active === "snimci") {
+      // Load Instagram embed script
+      const existingScript = document.querySelector('script[src="//www.instagram.com/embed.js"]');
+      if (existingScript) {
+        // Re-process embeds
+        (window as any).instgrm?.Embeds?.process();
+      } else {
+        const script = document.createElement("script");
+        script.src = "//www.instagram.com/embed.js";
+        script.async = true;
+        document.body.appendChild(script);
+      }
+    }
+  }, [active]);
 
   return (
     <>
@@ -79,16 +95,34 @@ const Gallery = () => {
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {reelsEmbeds.map((url, i) => (
-              <div key={i} className="aspect-[9/16] w-full">
-                <iframe
-                  src={`${url}&amp;rd=1`}
-                  className="w-full h-full border-0 rounded-lg"
-                  allowFullScreen
-                  loading="lazy"
-                  title={`Dresura snimak ${i + 1}`}
-                />
+          <div ref={embedContainerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {reelIds.map((id, i) => (
+              <div key={id} className="flex justify-center">
+                <blockquote
+                  className="instagram-media"
+                  data-instgrm-permalink={`https://www.instagram.com/reel/${id}/`}
+                  data-instgrm-version="14"
+                  style={{
+                    background: "#141414",
+                    border: 0,
+                    borderRadius: "8px",
+                    margin: 0,
+                    maxWidth: "540px",
+                    minWidth: "280px",
+                    padding: 0,
+                    width: "100%",
+                  }}
+                >
+                  <a
+                    href={`https://www.instagram.com/reel/${id}/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-4 text-center text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Instagram className="w-8 h-8 mx-auto mb-2" />
+                    <span className="text-sm">Pogledajte snimak {i + 1} na Instagramu</span>
+                  </a>
+                </blockquote>
               </div>
             ))}
           </div>
