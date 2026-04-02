@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { Phone, MapPin, Mail, Instagram, Facebook } from "lucide-react";
+import TikTokIcon from "@/components/TikTokIcon";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import heroContact from "@/assets/hero-contact.jpg";
