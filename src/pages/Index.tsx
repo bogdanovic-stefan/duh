@@ -186,6 +186,9 @@ const Index = () => {
         </div>
       </SectionWrapper>
 
+      {/* Testimonials */}
+      <TestimonialsSection />
+
       {/* CTA Section */}
       <section className="bg-gold py-16">
         <div className="container text-center">
