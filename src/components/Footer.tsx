@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, MapPin, Mail, Instagram, Facebook } from "lucide-react";
 import logoDuh from "@/assets/logo-duh.webp";
+import TikTokIcon from "@/components/TikTokIcon";
 
 const Footer = () => {
   return (
