@@ -5,43 +5,29 @@ import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import heroAbout from "@/assets/hero-about.jpg";
 
-const categories = [
-  { key: "dresura", label: "Dresura" },
-  { key: "pansion", label: "Pansion" },
-  { key: "gosti", label: "Naši gosti" },
-  { key: "kucni", label: "Kućni smeštaj" },
-  { key: "dvoriste", label: "Dvorište" },
-] as const;
+type Tab = "slike" | "snimci";
 
-type CategoryKey = (typeof categories)[number]["key"];
+// Placeholder images for pansion — replace with real photos later
+const pansionImages = Array.from({ length: 12 }, (_, i) => ({
+  src: `https://placehold.co/600x600/141414/C4922A?text=Pansion+${i + 1}`,
+  alt: `Pansion ${i + 1}`,
+}));
 
-// Placeholder images per category — replace src with real Instagram embed URLs
-const galleryData: Record<CategoryKey, { src: string; alt: string }[]> = {
-  dresura: Array.from({ length: 12 }, (_, i) => ({
-    src: `https://placehold.co/600x600/141414/C4922A?text=Dresura+${i + 1}`,
-    alt: `Dresura ${i + 1}`,
-  })),
-  pansion: Array.from({ length: 12 }, (_, i) => ({
-    src: `https://placehold.co/600x600/141414/C4922A?text=Pansion+${i + 1}`,
-    alt: `Pansion ${i + 1}`,
-  })),
-  gosti: Array.from({ length: 12 }, (_, i) => ({
-    src: `https://placehold.co/600x600/141414/C4922A?text=Gosti+${i + 1}`,
-    alt: `Naši gosti ${i + 1}`,
-  })),
-  kucni: Array.from({ length: 12 }, (_, i) => ({
-    src: `https://placehold.co/600x600/141414/C4922A?text=Kucni+${i + 1}`,
-    alt: `Kućni smeštaj ${i + 1}`,
-  })),
-  dvoriste: Array.from({ length: 12 }, (_, i) => ({
-    src: `https://placehold.co/600x600/141414/C4922A?text=Dvoriste+${i + 1}`,
-    alt: `Dvorište ${i + 1}`,
-  })),
-};
+const reelsEmbeds = [
+  "https://www.instagram.com/reel/DVtB7wzjNJZ/?utm_source=ig_embed",
+  "https://www.instagram.com/reel/DVYn_8ADd41/?utm_source=ig_embed",
+  "https://www.instagram.com/reel/DUYlmrSDZYK/?utm_source=ig_embed",
+  "https://www.instagram.com/reel/DSnCPsBjZqZ/?utm_source=ig_embed",
+  "https://www.instagram.com/reel/DRQMx0fjVWT/?utm_source=ig_embed",
+  "https://www.instagram.com/reel/DPljMdtjUmV/?utm_source=ig_embed",
+  "https://www.instagram.com/reel/DPgUlqnjdmp/?utm_source=ig_embed",
+  "https://www.instagram.com/reel/DMyCrMhNEr3/?utm_source=ig_embed",
+  "https://www.instagram.com/reel/DKkZBEMNLsO/?utm_source=ig_embed",
+  "https://www.instagram.com/reel/DGdSJJvNveo/?utm_source=ig_embed",
+];
 
 const Gallery = () => {
-  const [active, setActive] = useState<CategoryKey>("dresura");
-  const images = galleryData[active];
+  const [active, setActive] = useState<Tab>("slike");
 
   return (
     <>
@@ -58,37 +44,55 @@ const Gallery = () => {
       />
 
       <SectionWrapper>
-        {/* Category buttons */}
+        {/* Tab buttons */}
         <div className="flex flex-wrap justify-center gap-3 mb-10">
-          {categories.map((cat) => (
+          {[
+            { key: "slike" as Tab, label: "Slike pansiona" },
+            { key: "snimci" as Tab, label: "Snimci dresura" },
+          ].map((tab) => (
             <button
-              key={cat.key}
-              onClick={() => setActive(cat.key)}
+              key={tab.key}
+              onClick={() => setActive(tab.key)}
               className={`px-6 py-2.5 rounded-sm font-heading text-sm uppercase tracking-widest transition-all duration-300 border ${
-                active === cat.key
+                active === tab.key
                   ? "bg-primary text-primary-foreground border-primary"
                   : "bg-transparent text-muted-foreground border-border hover:border-primary hover:text-primary"
               }`}
             >
-              {cat.label}
+              {tab.label}
             </button>
           ))}
         </div>
 
-        {/* Image grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-          {images.map((img, i) => (
-            <div key={`${active}-${i}`} className="overflow-hidden group aspect-square">
-              <img
-                src={img.src}
-                alt={img.alt}
-                loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          ))}
-        </div>
-
+        {/* Content */}
+        {active === "slike" ? (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+            {pansionImages.map((img, i) => (
+              <div key={i} className="overflow-hidden group aspect-square">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {reelsEmbeds.map((url, i) => (
+              <div key={i} className="aspect-[9/16] w-full">
+                <iframe
+                  src={`${url}&amp;rd=1`}
+                  className="w-full h-full border-0 rounded-lg"
+                  allowFullScreen
+                  loading="lazy"
+                  title={`Dresura snimak ${i + 1}`}
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </SectionWrapper>
 
       <div className="container pb-16 -mt-8">
