@@ -23,6 +23,9 @@ const Footer = () => {
               <a href="https://www.facebook.com/dresura.pasa.duh" target="_blank" rel="noopener noreferrer" className="text-dark-foreground/60 hover:text-gold transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
+              <a href="https://www.tiktok.com/@dresurapasaduh" target="_blank" rel="noopener noreferrer" className="text-dark-foreground/60 hover:text-gold transition-colors">
+                <TikTokIcon className="w-5 h-5" />
+              </a>
             </div>
             <p className="text-xs text-dark-foreground/50 font-body mt-3">PIB: 115259625</p>
           </div>
