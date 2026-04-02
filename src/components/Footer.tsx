@@ -10,7 +10,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <img src={logoDuh} alt="DUH - Dresura i pansion za pse" className="h-14 w-auto mb-4" />
+            <Link to="/">
+              <img src={logoDuh} alt="DUH - Dresura i pansion za pse" className="h-20 w-auto mb-4" />
+            </Link>
             <p className="text-sm text-dark-foreground/70 font-body leading-relaxed">
               Profesionalna dresura i pansion za pse. Vojnička preciznost, kućna toplina.
             </p>
