@@ -152,6 +152,14 @@ const Gallery = () => {
             >
               <Facebook className="w-8 h-8" />
             </a>
+            <a
+              href="https://www.tiktok.com/@dresurapasaduh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              <TikTokIcon className="w-8 h-8" />
+            </a>
           </div>
         </div>
       </div>

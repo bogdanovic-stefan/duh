@@ -10,9 +10,9 @@ import facilityInterior from "@/assets/hotel-za-pse.jpg";
 import facilityYard from "@/assets/dvoriste.png";
 import facilityTraining from "@/assets/facility-training.jpg";
 import facilityHomeBoarding from "@/assets/facility-home-boarding.jpg";
-import serviceObedience from "@/assets/service-obedience.jpg";
-import serviceSocialization from "@/assets/service-socialization.jpg";
-import serviceProtection from "@/assets/service-protection.jpg";
+import serviceObedience from "@/assets/osnovna-i-napredna-dresura-2.jpg";
+import serviceSocialization from "@/assets/socijalizacija-2.jpg";
+import serviceProtection from "@/assets/napad-i-odbrana-2.jpg";
 
 const facilities = [
   { icon: Home, title: "Unutrašnji hotel", desc: "Prostrane, čiste i klimatizovane sobe.", image: facilityInterior },

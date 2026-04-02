@@ -36,7 +36,7 @@ const Header = () => {
     >
       <div className="container flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logoDuh} alt="DUH - Dresura i pansion za pse" className="h-14 md:h-18 w-auto" />
+          <img src={logoDuh} alt="DUH - Dresura i pansion za pse" className="h-16 md:h-20 w-auto" />
         </Link>
 
         {/* Desktop Nav */}

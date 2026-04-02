@@ -100,6 +100,16 @@ const Contact = () => {
                   <p className="font-body text-muted-foreground">Dresura i pansion za pse DUH</p>
                 </div>
               </a>
+
+              <a href="https://www.tiktok.com/@dresurapasaduh" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+                <div className="w-12 h-12 flex items-center justify-center bg-gold/10 group-hover:bg-gold/20 transition-colors">
+                  <TikTokIcon className="w-5 h-5 text-gold" />
+                </div>
+                <div>
+                  <p className="font-heading text-sm uppercase tracking-wider">TikTok</p>
+                  <p className="font-body text-muted-foreground">@dresurapasaduh</p>
+                </div>
+              </a>
             </div>
 
           </div>
