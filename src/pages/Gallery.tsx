@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useState, useEffect, useRef } from "react";
 import { Instagram, Facebook } from "lucide-react";
+import TikTokIcon from "@/components/TikTokIcon";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import heroAbout from "@/assets/hero-about.jpg";
@@ -150,6 +151,14 @@ const Gallery = () => {
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Facebook className="w-8 h-8" />
+            </a>
+            <a
+              href="https://www.tiktok.com/@dresurapasaduh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              <TikTokIcon className="w-8 h-8" />
             </a>
           </div>
         </div>

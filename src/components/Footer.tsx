@@ -1,15 +1,18 @@
 import { Link } from "react-router-dom";
 import { Phone, MapPin, Mail, Instagram, Facebook } from "lucide-react";
 import logoDuh from "@/assets/logo-duh.webp";
+import TikTokIcon from "@/components/TikTokIcon";
 
 const Footer = () => {
   return (
     <footer className="bg-dark text-dark-foreground">
       <div className="container py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <img src={logoDuh} alt="DUH - Dresura i pansion za pse" className="h-14 w-auto mb-4" />
+            <Link to="/">
+              <img src={logoDuh} alt="DUH - Dresura i pansion za pse" className="h-20 w-auto mb-4" />
+            </Link>
             <p className="text-sm text-dark-foreground/70 font-body leading-relaxed">
               Profesionalna dresura i pansion za pse. Vojnička preciznost, kućna toplina.
             </p>
@@ -19,6 +22,9 @@ const Footer = () => {
               </a>
               <a href="https://www.facebook.com/dresura.pasa.duh" target="_blank" rel="noopener noreferrer" className="text-dark-foreground/60 hover:text-gold transition-colors">
                 <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://www.tiktok.com/@dresurapasaduh" target="_blank" rel="noopener noreferrer" className="text-dark-foreground/60 hover:text-gold transition-colors">
+                <TikTokIcon className="w-5 h-5" />
               </a>
             </div>
             <p className="text-xs text-dark-foreground/50 font-body mt-3">PIB: 115259625</p>

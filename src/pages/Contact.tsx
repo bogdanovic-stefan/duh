@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { Phone, MapPin, Mail, Instagram, Facebook } from "lucide-react";
+import TikTokIcon from "@/components/TikTokIcon";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import heroContact from "@/assets/hero-contact.jpg";
@@ -97,6 +98,16 @@ const Contact = () => {
                 <div>
                   <p className="font-heading text-sm uppercase tracking-wider">Facebook</p>
                   <p className="font-body text-muted-foreground">Dresura i pansion za pse DUH</p>
+                </div>
+              </a>
+
+              <a href="https://www.tiktok.com/@dresurapasaduh" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+                <div className="w-12 h-12 flex items-center justify-center bg-gold/10 group-hover:bg-gold/20 transition-colors">
+                  <TikTokIcon className="w-5 h-5 text-gold" />
+                </div>
+                <div>
+                  <p className="font-heading text-sm uppercase tracking-wider">TikTok</p>
+                  <p className="font-body text-muted-foreground">@dresurapasaduh</p>
                 </div>
               </a>
             </div>
