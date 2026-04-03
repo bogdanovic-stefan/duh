@@ -23,7 +23,9 @@ const reelIds = [
   "DGdSJJvNveo",
   "DKkZBEMNLsO",
   "DUYlmrSDZYK",
-  "DMyCrMhNEr3",
+  "DJ4GO3Rt5tD",
+  "DQNIysTDRKT",
+  "DPZftLNjR1Y",
 ];
 
 const Gallery = () => {
