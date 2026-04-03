@@ -23,7 +23,9 @@ const reelIds = [
   "DGdSJJvNveo",
   "DKkZBEMNLsO",
   "DUYlmrSDZYK",
-  "DMyCrMhNEr3",
+  "DJ4GO3Rt5tD",
+  "DQNIysTDRKT",
+  "DPZftLNjR1Y",
 ];
 
 const Gallery = () => {
@@ -133,7 +135,7 @@ const Gallery = () => {
       <div className="container pb-16 -mt-8">
         <div className="text-center">
           <p className="font-body text-lg text-muted-foreground mb-6">
-            Zapratite nas na Instagramu i Facebooku za još fotografija i novosti.
+            Zapratite nas na društvenim mrežama za još novosti.
           </p>
           <div className="flex justify-center gap-6">
             <a
