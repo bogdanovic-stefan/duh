@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Dresura i pansion za pse - Duh
 
-TODO: Document your project here
+
