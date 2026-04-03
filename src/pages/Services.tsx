@@ -40,6 +40,13 @@ const Services = () => {
       <Helmet>
         <title>Usluge i cenovnik – DUH Dresura i pansion za pse | Novi Sad</title>
         <meta name="description" content="Pogledajte cenovnik pansiona i programe dresure pasa u centru DUH. Socijalizacija, osnovna poslušnost, napad i odbrana." />
+        <link rel="canonical" href="https://dresuraipansionzapseduh.rs/usluge" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dresuraipansionzapseduh.rs/usluge" />
+        <meta property="og:title" content="Usluge i cenovnik – DUH Dresura i pansion za pse | Novi Sad" />
+        <meta property="og:description" content="Pogledajte cenovnik pansiona i programe dresure pasa u centru DUH. Socijalizacija, osnovna poslušnost, napad i odbrana." />
+        <meta property="og:locale" content="sr_RS" />
+        <meta property="og:site_name" content="DUH – Dresura i pansion za pse" />
       </Helmet>
       <HeroSection
         image={heroHome}
