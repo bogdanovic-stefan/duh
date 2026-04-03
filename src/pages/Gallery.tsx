@@ -1,17 +1,34 @@
 import { Helmet } from "react-helmet-async";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Instagram, Facebook } from "lucide-react";
 import TikTokIcon from "@/components/TikTokIcon";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import heroAbout from "@/assets/hero-about.jpg";
 
+import pansion1 from "@/assets/gallery/pansion-1.jpg";
+import pansion2 from "@/assets/gallery/pansion-2.jpg";
+import nasPrevoz from "@/assets/gallery/nas-prevoz.jpg";
+import kaveziZaPrevoz from "@/assets/gallery/kavezi-za-prevoz.jpg";
+import milanDuh from "@/assets/gallery/milan-duh.jpg";
+import milanDuh2 from "@/assets/gallery/milan-duh2.jpg";
+import milanDuh4 from "@/assets/gallery/milan-duh4.jpg";
+import dvoriste1 from "@/assets/gallery/dvoriste-1.jpg";
+import dvoriste2 from "@/assets/gallery/dvoriste-2.jpg";
+
 type Tab = "slike" | "snimci";
 
-const pansionImages = Array.from({ length: 12 }, (_, i) => ({
-  src: `https://placehold.co/600x600/141414/C4922A?text=Pansion+${i + 1}`,
-  alt: `Pansion ${i + 1}`,
-}));
+const pansionImages = [
+  { src: pansion1, alt: "Unutrašnjost pansiona - boksovi za pse", tall: true },
+  { src: nasPrevoz, alt: "Naš prevoz za pse - brendirano vozilo", tall: false },
+  { src: milanDuh, alt: "Milan i Duh - vojni pas", tall: false },
+  { src: pansion2, alt: "Boksovi za pse sa ležajevima", tall: false },
+  { src: dvoriste1, alt: "Psi na dvorištu pansiona", tall: true },
+  { src: milanDuh2, alt: "Milan sa Duhom u opremi", tall: true },
+  { src: kaveziZaPrevoz, alt: "Kavez za siguran prevoz pasa", tall: true },
+  { src: dvoriste2, alt: "Psi se igraju na dvorištu", tall: true },
+  { src: milanDuh4, alt: "Milan i Duh na terenu", tall: true },
+];
 
 const reelIds = [
   "DRQMx0fjVWT",
@@ -30,14 +47,11 @@ const reelIds = [
 
 const Gallery = () => {
   const [active, setActive] = useState<Tab>("slike");
-  const embedContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (active === "snimci") {
-      // Load Instagram embed script
       const existingScript = document.querySelector('script[src="//www.instagram.com/embed.js"]');
       if (existingScript) {
-        // Re-process embeds
         (window as any).instgrm?.Embeds?.process();
       } else {
         const script = document.createElement("script");
@@ -52,7 +66,14 @@ const Gallery = () => {
     <>
       <Helmet>
         <title>Galerija – DUH Dresura i pansion za pse | Novi Sad</title>
-        <meta name="description" content="Pogledajte fotografije iz centra DUH – dresura, pansion, dvorište i srećni psi. Pratite nas na Instagramu i Facebooku." />
+        <meta name="description" content="Pogledajte fotografije iz centra DUH – dresura, pansion, dvorište i srećni psi. Pratite nas na Instagramu, Facebooku i TikToku." />
+        <link rel="canonical" href="https://dresuraipansionzapseduh.rs/galerija" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dresuraipansionzapseduh.rs/galerija" />
+        <meta property="og:title" content="Galerija – DUH Dresura i pansion za pse | Novi Sad" />
+        <meta property="og:description" content="Pogledajte fotografije iz centra DUH – dresura, pansion, dvorište i srećni psi. Pratite nas na Instagramu, Facebooku i TikToku." />
+        <meta property="og:locale" content="sr_RS" />
+        <meta property="og:site_name" content="DUH – Dresura i pansion za pse" />
       </Helmet>
       <HeroSection
         image={heroAbout}
@@ -85,20 +106,20 @@ const Gallery = () => {
 
         {/* Content */}
         {active === "slike" ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-4 space-y-3 md:space-y-4">
             {pansionImages.map((img, i) => (
-              <div key={i} className="overflow-hidden group aspect-square">
+              <div key={i} className="overflow-hidden group break-inside-avoid">
                 <img
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto object-cover rounded group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
             ))}
           </div>
         ) : (
-          <div ref={embedContainerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {reelIds.map((id, i) => (
               <div key={id} className="flex justify-center">
                 <blockquote
