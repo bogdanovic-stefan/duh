@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-dark text-dark-foreground">
       <div className="container py-16">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-8">
           {/* Brand */}
           <div>
             <Link to="/">

@@ -26,15 +26,22 @@ import dvoriste2 from "@/assets/gallery/dvoriste-2.jpg";
 type Tab = "slike" | "snimci";
 
 const pansionImages = [
-  { src: pansion1, alt: "Unutrašnjost pansiona - boksovi za pse", tall: true },
-  { src: nasPrevoz, alt: "Naš prevoz za pse - brendirano vozilo", tall: false },
-  { src: milanDuh, alt: "Milan i Duh - vojni pas", tall: false },
-  { src: pansion2, alt: "Boksovi za pse sa ležajevima", tall: false },
-  { src: dvoriste1, alt: "Psi na dvorištu pansiona", tall: true },
-  { src: milanDuh2, alt: "Milan sa Duhom u opremi", tall: true },
-  { src: kaveziZaPrevoz, alt: "Kavez za siguran prevoz pasa", tall: true },
-  { src: dvoriste2, alt: "Psi se igraju na dvorištu", tall: true },
-  { src: milanDuh4, alt: "Milan i Duh na terenu", tall: true },
+  { src: pansion1, alt: "Unutrašnjost pansiona - boksovi za pse" },
+  { src: nasPrevoz, alt: "Naš prevoz za pse - brendirano vozilo" },
+  { src: milanDuh, alt: "Milan i Duh - vojni pas" },
+  { src: pansion2, alt: "Boksovi za pse sa ležajevima" },
+  { src: pansion3, alt: "Duh ispred ulaza u pansion" },
+  { src: pansion4, alt: "Pansion DUH - spoljašnjost" },
+  { src: dvoriste1, alt: "Psi na dvorištu pansiona" },
+  { src: milanDuh2, alt: "Milan sa Duhom u opremi" },
+  { src: milanDuh3, alt: "Milan i Duh u vojsci" },
+  { src: kaveziZaPrevoz, alt: "Kavez za siguran prevoz pasa" },
+  { src: odbrana, alt: "Trening napada i odbrane" },
+  { src: milanDuh42, alt: "Milan i Duh na zadatku" },
+  { src: milanDuh5, alt: "Milan i Duh u akciji" },
+  { src: milanDuh6, alt: "Milan i Duh - vojna policija" },
+  { src: dvoriste2, alt: "Psi se igraju na dvorištu" },
+  { src: milanDuh4, alt: "Milan i Duh na terenu" },
 ];
 
 const reelIds = [

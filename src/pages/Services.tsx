@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import heroHome from "@/assets/hero-home.jpg";
-import serviceObedience from "@/assets/osnovna-i-napredna-dresura-2.jpg";
-import serviceSocialization from "@/assets/socijalizacija-2.jpg";
-import serviceProtection from "@/assets/napad-i-odbrana-2.jpg";
+import serviceObedience from "@/assets/osnovna-napredna-obuka.jpg";
+import serviceSocialization from "@/assets/socijalizacija-3.jpg";
+import serviceProtection from "@/assets/napad-odbrana.jpg";
 
 const pricingData = [
   { breed: "Mala rasa", price: "1.500", highlight: false },
