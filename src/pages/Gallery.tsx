@@ -8,26 +8,40 @@ import heroAbout from "@/assets/hero-about.jpg";
 
 import pansion1 from "@/assets/gallery/pansion-1.jpg";
 import pansion2 from "@/assets/gallery/pansion-2.jpg";
+import pansion3 from "@/assets/gallery/pansion-3.jpg";
+import pansion4 from "@/assets/gallery/pansion-4.jpg";
 import nasPrevoz from "@/assets/gallery/nas-prevoz.jpg";
 import kaveziZaPrevoz from "@/assets/gallery/kavezi-za-prevoz.jpg";
 import milanDuh from "@/assets/gallery/milan-duh.jpg";
 import milanDuh2 from "@/assets/gallery/milan-duh2.jpg";
+import milanDuh3 from "@/assets/gallery/milan-duh3.jpg";
 import milanDuh4 from "@/assets/gallery/milan-duh4.jpg";
+import milanDuh42 from "@/assets/gallery/milan-duh4-2.jpg";
+import milanDuh5 from "@/assets/gallery/milan-duh5.jpg";
+import milanDuh6 from "@/assets/gallery/milan-duh6.jpg";
+import odbrana from "@/assets/gallery/odbrana.jpg";
 import dvoriste1 from "@/assets/gallery/dvoriste-1.jpg";
 import dvoriste2 from "@/assets/gallery/dvoriste-2.jpg";
 
 type Tab = "slike" | "snimci";
 
 const pansionImages = [
-  { src: pansion1, alt: "Unutrašnjost pansiona - boksovi za pse", tall: true },
-  { src: nasPrevoz, alt: "Naš prevoz za pse - brendirano vozilo", tall: false },
-  { src: milanDuh, alt: "Milan i Duh - vojni pas", tall: false },
-  { src: pansion2, alt: "Boksovi za pse sa ležajevima", tall: false },
-  { src: dvoriste1, alt: "Psi na dvorištu pansiona", tall: true },
-  { src: milanDuh2, alt: "Milan sa Duhom u opremi", tall: true },
-  { src: kaveziZaPrevoz, alt: "Kavez za siguran prevoz pasa", tall: true },
-  { src: dvoriste2, alt: "Psi se igraju na dvorištu", tall: true },
-  { src: milanDuh4, alt: "Milan i Duh na terenu", tall: true },
+  { src: pansion1, alt: "Unutrašnjost pansiona - boksovi za pse" },
+  { src: nasPrevoz, alt: "Naš prevoz za pse - brendirano vozilo" },
+  { src: milanDuh, alt: "Milan i Duh - vojni pas" },
+  { src: pansion2, alt: "Boksovi za pse sa ležajevima" },
+  { src: pansion3, alt: "Duh ispred ulaza u pansion" },
+  { src: pansion4, alt: "Pansion DUH - spoljašnjost" },
+  { src: dvoriste1, alt: "Psi na dvorištu pansiona" },
+  { src: milanDuh2, alt: "Milan sa Duhom u opremi" },
+  { src: milanDuh3, alt: "Milan i Duh u vojsci" },
+  { src: kaveziZaPrevoz, alt: "Kavez za siguran prevoz pasa" },
+  { src: odbrana, alt: "Trening napada i odbrane" },
+  { src: milanDuh42, alt: "Milan i Duh na zadatku" },
+  { src: milanDuh5, alt: "Milan i Duh u akciji" },
+  { src: milanDuh6, alt: "Milan i Duh - vojna policija" },
+  { src: dvoriste2, alt: "Psi se igraju na dvorištu" },
+  { src: milanDuh4, alt: "Milan i Duh na terenu" },
 ];
 
 const reelIds = [
