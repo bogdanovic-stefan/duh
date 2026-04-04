@@ -1,7 +1,7 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Shield, Sparkles, Eye } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
+import Seo from "@/components/Seo";
 import SectionWrapper from "@/components/SectionWrapper";
 import heroAbout from "@/assets/hero-about.jpg";
 import trainerPortrait from "@/assets/trainer-portrait.jpg";
@@ -15,17 +15,11 @@ const values = [
 const About = () => {
   return (
     <>
-      <Helmet>
-        <title>O nama – DUH Dresura i pansion za pse | Novi Sad</title>
-        <meta name="description" content="Upoznajte Milana, profesionalnog dresera sa iskustvom u vojnoj policiji. Saznajte više o centru DUH i našem pristupu dresuri i pansionskom smeštaju pasa." />
-        <link rel="canonical" href="https://dresuraipansionzapseduh.rs/o-nama" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dresuraipansionzapseduh.rs/o-nama" />
-        <meta property="og:title" content="O nama – DUH Dresura i pansion za pse | Novi Sad" />
-        <meta property="og:description" content="Upoznajte Milana, profesionalnog dresera sa iskustvom u vojnoj policiji. Saznajte više o centru DUH i našem pristupu dresuri i pansionskom smeštaju pasa." />
-        <meta property="og:locale" content="sr_RS" />
-        <meta property="og:site_name" content="DUH – Dresura i pansion za pse" />
-      </Helmet>
+      <Seo
+        title="O nama - DUH Dresura i pansion za pse"
+        description="Upoznajte Milana, profesionalnog dresera sa iskustvom u vojnoj policiji. Saznajte više o našem pristupu dresuri i pansionu."
+        path="/o-nama"
+      />
       <HeroSection
         image={heroAbout}
         title="O nama"

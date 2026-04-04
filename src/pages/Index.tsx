@@ -1,7 +1,7 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Shield, Home, TreePine, Target, Phone, MapPin, Mail, Truck, Car, ParkingCircle } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
+import Seo from "@/components/Seo";
 import SectionWrapper from "@/components/SectionWrapper";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import heroDogPortrait from "@/assets/hero-dog-portrait.jpg";
@@ -36,17 +36,11 @@ const directions = [
 const Index = () => {
   return (
     <>
-      <Helmet>
-        <title>DUH – Dresura i pansion za pse | Novi Sad</title>
-        <meta name="description" content="Profesionalna dresura i pansion za pse u blizini Novog Sada. Hotel za pse, obuka, socijalizacija, kućni smeštaj i prevoz." />
-        <link rel="canonical" href="https://dresuraipansionzapseduh.rs/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dresuraipansionzapseduh.rs/" />
-        <meta property="og:title" content="DUH – Dresura i pansion za pse | Novi Sad" />
-        <meta property="og:description" content="Profesionalna dresura i pansion za pse u blizini Novog Sada. Vojnička preciznost, kućna toplina. Hotel za pse, obuka, socijalizacija i prevoz." />
-        <meta property="og:locale" content="sr_RS" />
-        <meta property="og:site_name" content="DUH – Dresura i pansion za pse" />
-      </Helmet>
+      <Seo
+        title="DUH - Dresura i pansion za pse | Novi Sad"
+        description="Profesionalna dresura i pansion za pse u blizini Novog Sada. Vojnička preciznost, kućna toplina. Hotel za pse, obuka i socijalizacija."
+        path="/"
+      />
       <HeroSection
         image={heroDogPortrait}
         title="Dresura i pansion za pse"

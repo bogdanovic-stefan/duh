@@ -1,8 +1,8 @@
-import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { Phone, MapPin, Mail, Instagram, Facebook } from "lucide-react";
 import TikTokIcon from "@/components/TikTokIcon";
 import HeroSection from "@/components/HeroSection";
+import Seo from "@/components/Seo";
 import SectionWrapper from "@/components/SectionWrapper";
 import heroContact from "@/assets/hero-contact.jpg";
 
@@ -27,17 +27,11 @@ const Contact = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Kontakt – DUH Dresura i pansion za pse | Novi Sad</title>
-        <meta name="description" content="Kontaktirajte centar DUH za dresuru i pansion za pse. Telefon, email, adresa i kontakt forma za rezervacije." />
-        <link rel="canonical" href="https://dresuraipansionzapseduh.rs/kontakt" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dresuraipansionzapseduh.rs/kontakt" />
-        <meta property="og:title" content="Kontakt – DUH Dresura i pansion za pse | Novi Sad" />
-        <meta property="og:description" content="Kontaktirajte centar DUH za dresuru i pansion za pse. Telefon, email, adresa i kontakt forma za rezervacije." />
-        <meta property="og:locale" content="sr_RS" />
-        <meta property="og:site_name" content="DUH – Dresura i pansion za pse" />
-      </Helmet>
+      <Seo
+        title="Kontakt - DUH Dresura i pansion za pse"
+        description="Kontaktirajte nas za rezervaciju pansiona ili dresure. Telefon, email i adresa centra u Novom Sadu."
+        path="/kontakt"
+      />
       <HeroSection
         image={heroContact}
         title="Kontakt"

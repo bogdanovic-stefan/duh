@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container py-16">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-8">
           {/* Brand */}
-          <div>
+          <div className="col-span-2 lg:col-span-1">
             <Link to="/">
               <img src={logoDuh} alt="DUH - Dresura i pansion za pse" className="h-20 w-auto mb-4" />
             </Link>
@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation */}
-          <div>
+          <div className="lg:col-start-2">
             <h4 className="font-heading text-sm uppercase tracking-widest text-gold mb-4">Navigacija</h4>
             <nav className="flex flex-col gap-2">
               {[
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="col-start-2 lg:col-start-3">
             <h4 className="font-heading text-sm uppercase tracking-widest text-gold mb-4">Kontakt</h4>
             <div className="flex flex-col gap-3 text-sm text-dark-foreground/70 font-body">
               <a href="tel:+381638003865" className="flex items-center gap-2 hover:text-gold transition-colors">
@@ -68,7 +68,7 @@ const Footer = () => {
           </div>
 
           {/* Hours */}
-          <div>
+          <div className="col-start-2 lg:col-start-4">
             <h4 className="font-heading text-sm uppercase tracking-widest text-gold mb-4">Radno vreme</h4>
             <div className="flex flex-col gap-2 text-sm text-dark-foreground/70 font-body">
               <p>Ponedeljak – Nedelja</p>
