@@ -4,7 +4,8 @@ import TikTokIcon from "@/components/TikTokIcon";
 import HeroSection from "@/components/HeroSection";
 import Seo from "@/components/Seo";
 import SectionWrapper from "@/components/SectionWrapper";
-import heroAbout from "@/assets/hero-about.jpg";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import heroGallery from "@/assets/hero-gallery.png";
 
 import pansion1 from "@/assets/gallery/pansion-1.jpg";
 import pansion2 from "@/assets/gallery/pansion-2.jpg";
@@ -59,6 +60,7 @@ const reelIds = [
 
 const Gallery = () => {
   const [active, setActive] = useState<Tab>("slike");
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
   useEffect(() => {
     if (active === "snimci") {
@@ -82,11 +84,12 @@ const Gallery = () => {
         path="/galerija"
       />
       <HeroSection
-        image={heroAbout}
+        image={heroGallery}
         title="Galerija"
         subtitle="Pogledajte naš prostor, treninge i srećne pse"
         height="medium"
         overlay="dark"
+        imageClassName="md:object-[center_20%]"
       />
 
       <SectionWrapper>
@@ -112,18 +115,43 @@ const Gallery = () => {
 
         {/* Content */}
         {active === "slike" ? (
-          <div className="columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-4 space-y-3 md:space-y-4">
-            {pansionImages.map((img, i) => (
-              <div key={i} className="overflow-hidden group break-inside-avoid">
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  loading="lazy"
-                  className="w-full h-auto object-cover rounded group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            ))}
-          </div>
+          <>
+            <div className="columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-4 space-y-3 md:space-y-4">
+              {pansionImages.map((img, i) => (
+                <div key={i} className="overflow-hidden group break-inside-avoid rounded">
+                  <button
+                    type="button"
+                    onClick={() => setLightbox({ src: img.src, alt: img.alt })}
+                    className="w-full block text-left cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+                    aria-label={`Uvećaj: ${img.alt}`}
+                  >
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      loading="lazy"
+                      className="w-full h-auto object-cover rounded group-hover:scale-105 transition-transform duration-500 pointer-events-none"
+                    />
+                  </button>
+                </div>
+              ))}
+            </div>
+
+            <Dialog open={lightbox !== null} onOpenChange={(open) => !open && setLightbox(null)}>
+              <DialogContent
+                aria-describedby={undefined}
+                className="max-w-[min(96vw,1400px)] w-fit max-h-[92vh] p-2 sm:p-4 border-none bg-black/95 shadow-2xl text-white [&>button]:text-white [&>button]:hover:bg-white/10 [&>button]:hover:text-white [&>button]:ring-offset-black"
+              >
+                <DialogTitle className="sr-only">{lightbox?.alt ?? "Fotografija"}</DialogTitle>
+                {lightbox ? (
+                  <img
+                    src={lightbox.src}
+                    alt={lightbox.alt}
+                    className="max-h-[85vh] w-auto max-w-full object-contain rounded-sm mx-auto block"
+                  />
+                ) : null}
+              </DialogContent>
+            </Dialog>
+          </>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {reelIds.map((id, i) => (

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { cn } from "@/lib/utils";
 
 interface HeroSectionProps {
   image: string;
@@ -11,6 +12,8 @@ interface HeroSectionProps {
   secondaryCta?: { label: string; to: string };
   overlay?: "dark" | "medium" | "light";
   height?: "full" | "large" | "medium";
+  /** Dodatne Tailwind klase za hero sliku (npr. object-position za crop) */
+  imageClassName?: string;
 }
 
 const HeroSection = ({
@@ -23,6 +26,7 @@ const HeroSection = ({
   secondaryCta,
   overlay = "dark",
   height = "full",
+  imageClassName,
 }: HeroSectionProps) => {
   const overlayOpacity = overlay === "dark" ? "bg-dark/70" : overlay === "medium" ? "bg-dark/50" : "bg-dark/30";
   const heightClass = height === "full" ? "min-h-screen" : height === "large" ? "min-h-[70vh]" : "min-h-[50vh]";
@@ -32,7 +36,7 @@ const HeroSection = ({
       <img
         src={image}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover"
+        className={cn("absolute inset-0 w-full h-full object-cover object-center", imageClassName)}
         width={1920}
         height={1080}
       />
