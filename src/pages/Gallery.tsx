@@ -1,8 +1,8 @@
-import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from "react";
 import { Instagram, Facebook } from "lucide-react";
 import TikTokIcon from "@/components/TikTokIcon";
 import HeroSection from "@/components/HeroSection";
+import Seo from "@/components/Seo";
 import SectionWrapper from "@/components/SectionWrapper";
 import heroAbout from "@/assets/hero-about.jpg";
 
@@ -15,7 +15,6 @@ import kaveziZaPrevoz from "@/assets/gallery/kavezi-za-prevoz.jpg";
 import milanDuh from "@/assets/gallery/milan-duh.jpg";
 import milanDuh2 from "@/assets/gallery/milan-duh2.jpg";
 import milanDuh3 from "@/assets/gallery/milan-duh3.jpg";
-import milanDuh4 from "@/assets/gallery/milan-duh4.jpg";
 import milanDuh42 from "@/assets/gallery/milan-duh4-2.jpg";
 import milanDuh5 from "@/assets/gallery/milan-duh5.jpg";
 import milanDuh6 from "@/assets/gallery/milan-duh6.jpg";
@@ -41,7 +40,6 @@ const pansionImages = [
   { src: milanDuh5, alt: "Milan i Duh u akciji" },
   { src: milanDuh6, alt: "Milan i Duh - vojna policija" },
   { src: dvoriste2, alt: "Psi se igraju na dvorištu" },
-  { src: milanDuh4, alt: "Milan i Duh na terenu" },
 ];
 
 const reelIds = [
@@ -78,17 +76,11 @@ const Gallery = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Galerija – DUH Dresura i pansion za pse | Novi Sad</title>
-        <meta name="description" content="Pogledajte fotografije iz centra DUH – dresura, pansion, dvorište i srećni psi. Pratite nas na Instagramu, Facebooku i TikToku." />
-        <link rel="canonical" href="https://dresuraipansionzapseduh.rs/galerija" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dresuraipansionzapseduh.rs/galerija" />
-        <meta property="og:title" content="Galerija – DUH Dresura i pansion za pse | Novi Sad" />
-        <meta property="og:description" content="Pogledajte fotografije iz centra DUH – dresura, pansion, dvorište i srećni psi. Pratite nas na Instagramu, Facebooku i TikToku." />
-        <meta property="og:locale" content="sr_RS" />
-        <meta property="og:site_name" content="DUH – Dresura i pansion za pse" />
-      </Helmet>
+      <Seo
+        title="Galerija - DUH Dresura i pansion za pse"
+        description="Pogledajte fotografije našeg centra, dresure i srećnih pasa. Pratite nas na društvenim mrežama."
+        path="/galerija"
+      />
       <HeroSection
         image={heroAbout}
         title="Galerija"

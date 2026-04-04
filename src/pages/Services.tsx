@@ -1,6 +1,6 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
+import Seo from "@/components/Seo";
 import SectionWrapper from "@/components/SectionWrapper";
 import heroHome from "@/assets/hero-home.jpg";
 import serviceObedience from "@/assets/osnovna-napredna-obuka.jpg";
@@ -37,17 +37,11 @@ const trainingPrograms = [
 const Services = () => {
   return (
     <>
-      <Helmet>
-        <title>Usluge i cenovnik – DUH Dresura i pansion za pse | Novi Sad</title>
-        <meta name="description" content="Pogledajte cenovnik pansiona i programe dresure pasa u centru DUH. Socijalizacija, osnovna poslušnost, napad i odbrana." />
-        <link rel="canonical" href="https://dresuraipansionzapseduh.rs/usluge" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dresuraipansionzapseduh.rs/usluge" />
-        <meta property="og:title" content="Usluge i cenovnik – DUH Dresura i pansion za pse | Novi Sad" />
-        <meta property="og:description" content="Pogledajte cenovnik pansiona i programe dresure pasa u centru DUH. Socijalizacija, osnovna poslušnost, napad i odbrana." />
-        <meta property="og:locale" content="sr_RS" />
-        <meta property="og:site_name" content="DUH – Dresura i pansion za pse" />
-      </Helmet>
+      <Seo
+        title="Usluge i cenovnik - DUH Dresura i pansion za pse"
+        description="Pogledajte cenovnik pansiona i programe dresure pasa u centru DUH. Socijalizacija, osnovna poslušnost i odbrana."
+        path="/usluge"
+      />
       <HeroSection
         image={heroHome}
         title="Usluge i cenovnik"
