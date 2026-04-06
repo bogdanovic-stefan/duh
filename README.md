@@ -45,7 +45,7 @@ The app runs at `http://localhost:8080` (see `vite.config.ts`).
 
 Canonical domain and absolute URLs for Open Graph, JSON-LD, `sitemap.xml`, and `robots.txt` are configured in:
 
-- `src/lib/site.ts` — `SITE_URL` (currently `https://www.duh.rs`)
+- `src/lib/site.ts` — `SITE_URL` (currently `https://dresurapasaduh.rs`)
 
 Update `SITE_URL` if the live domain changes. Keep `public/sitemap.xml` and `public/robots.txt` in sync with the same base URL.
 

@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://www.duh.rs/sitemap.xml
+Sitemap: https://dresurapasaduh.rs/sitemap.xml

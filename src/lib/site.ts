@@ -1,5 +1,5 @@
 /** Javni URL sajta (bez završnog slasha) — mora se poklapati sa produkcijskim domenom. */
-export const SITE_URL = "https://www.duh.rs";
+export const SITE_URL = "https://dresurapasaduh.rs";
 
 export const SITE_NAME = "DUH - Dresura i pansion za pse";
 
