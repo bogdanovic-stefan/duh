@@ -139,14 +139,14 @@ const Gallery = () => {
             <Dialog open={lightbox !== null} onOpenChange={(open) => !open && setLightbox(null)}>
               <DialogContent
                 aria-describedby={undefined}
-                className="max-w-[min(96vw,1400px)] w-fit max-h-[92vh] p-2 sm:p-4 border-none bg-black/95 shadow-2xl text-white [&>button]:text-white [&>button]:hover:bg-white/10 [&>button]:hover:text-white [&>button]:ring-offset-black"
+                className="w-[90vw] h-[82vh] sm:h-auto sm:w-fit max-w-[min(96vw,1400px)] max-h-[92vh] p-2 sm:p-4 border-none bg-black/95 shadow-2xl text-white [&>button]:text-white [&>button]:hover:bg-white/10 [&>button]:hover:text-white [&>button]:ring-offset-black"
               >
                 <DialogTitle className="sr-only">{lightbox?.alt ?? "Fotografija"}</DialogTitle>
                 {lightbox ? (
                   <img
                     src={lightbox.src}
                     alt={lightbox.alt}
-                    className="max-h-[85vh] w-auto max-w-full object-contain rounded-sm mx-auto block"
+                    className="w-full h-full max-h-[76vh] sm:max-h-[85vh] object-contain rounded-sm mx-auto block"
                   />
                 ) : null}
               </DialogContent>
