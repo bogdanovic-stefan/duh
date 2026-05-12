@@ -2,7 +2,7 @@
  * Posle `vite build` snima HTML za svaku rutiranu stranicu (Playwright + vite preview).
  * Rezultat: dist/index.html, dist/o-nama/index.html, … sa jednim setom meta tagova (Helmet).
  */
-import { spawn } from "node:child_process";
+import { execSync, spawn } from "node:child_process";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import net from "node:net";
 import { dirname, join, relative } from "node:path";
@@ -37,6 +37,25 @@ function distPathForRoute(route) {
   return join(dist, slug, "index.html");
 }
 
+function ensureLocalPlaywrightChromium() {
+  if (process.env.VERCEL === "1") return;
+  execSync("npx playwright install chromium", { cwd: root, stdio: "inherit", shell: true });
+}
+
+async function launchChromium() {
+  if (process.env.VERCEL === "1") {
+    const sChromium = (await import("@sparticuz/chromium")).default;
+    return chromium.launch({
+      args: sChromium.args,
+      executablePath: await sChromium.executablePath(),
+      headless: true,
+    });
+  }
+  return chromium.launch({
+    channel: process.env.PW_CHROMIUM_CHANNEL ?? undefined,
+  });
+}
+
 function waitForPreviewReady(origin) {
   const deadline = Date.now() + 60_000;
   return new Promise((resolve, reject) => {
@@ -61,6 +80,8 @@ function waitForPreviewReady(origin) {
 }
 
 async function main() {
+  ensureLocalPlaywrightChromium();
+
   const port = await pickFreePort();
   const origin = `http://127.0.0.1:${port}`;
 
@@ -84,14 +105,14 @@ async function main() {
 
   let browser;
   try {
-    browser = await chromium.launch({
-      channel: process.env.PW_CHROMIUM_CHANNEL ?? undefined,
-    });
+    browser = await launchChromium();
   } catch (e) {
     preview.kill();
     console.error(e);
     console.error(
-      "\nNije pronađen Chromium za Playwright. Instaliraj: npx playwright install chromium\n",
+      process.env.VERCEL === "1"
+        ? "\nPrerender na Vercelu: proveri @sparticuz/chromium i log iznad.\n"
+        : "\nNije pronađen Chromium za Playwright. Instaliraj: npx playwright install chromium\n",
     );
     process.exit(1);
   }
