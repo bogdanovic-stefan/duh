@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
-import { Shield, Sparkles, Eye } from "lucide-react";
+import { Shield, Sparkles, Eye, Phone, MapPin } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import Seo from "@/components/Seo";
 import SectionWrapper from "@/components/SectionWrapper";
 import heroAbout from "@/assets/hero-about.jpg";
 import trainerPortrait from "@/assets/trainer-portrait.jpg";
+import humanvetLogo from "@/assets/humanvet-logo.png";
+
+const HUMANVET_PHONE_HREF = "tel:+381654214729";
+const HUMANVET_MAPS_HREF =
+  "https://www.google.com/maps/search/?api=1&query=HUMANVET%20Mo%C5%A1e%20Pijade%2087%20Ba%C4%8Dki%20Jarak";
 
 const values = [
   { icon: Shield, title: "Disciplina bez surovosti", desc: "Verujemo u jasan autoritet i pozitivnu motivaciju." },
@@ -72,12 +77,75 @@ const About = () => {
             </div>
           ))}
         </div>
-        <div className="text-center mt-12">
-          <Link to="/kontakt" className="inline-block bg-gold px-8 py-4 font-heading text-sm uppercase tracking-widest text-primary-foreground hover:bg-gold-dark transition-colors">
-            Kontaktirajte nas
-          </Link>
+      </SectionWrapper>
+
+      <SectionWrapper dark id="prijatelji-pansiona">
+        <h2 className="font-heading text-3xl md:text-4xl font-bold uppercase tracking-wider text-gold text-center">
+          Prijatelji pansiona
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mt-12">
+          <div className="flex justify-center items-center">
+            <img
+              src={humanvetLogo}
+              alt="Humanvet — Naši ljubimci zaslužuju najbolje. 065 421 47 29, Moše Pijade 87, Bački Jarak"
+              className="w-full max-w-md lg:max-w-lg h-auto"
+            />
+          </div>
+
+          <div>
+            <p className="font-heading text-sm uppercase tracking-widest text-gold mb-4">Veterinarska saradnja</p>
+            <h3 className="font-heading text-2xl md:text-3xl font-bold uppercase tracking-wider">
+              Humanvet
+            </h3>
+            <p className="font-body text-dark-foreground/80 leading-relaxed mt-6">
+              Pansion DUH sarađuje sa veterinarskom ambulantom Humanvet u Bačkom Jarku. Ako tokom boravka zatreba pregled ili hitna pomoć, vaš pas ide kod proverenog veterinara — u istom mestu, bez gubljenja vremena.
+            </p>
+
+            <div className="mt-8 space-y-4">
+              <a href={HUMANVET_PHONE_HREF} className="flex items-center gap-4 group">
+                <div className="w-12 h-12 flex items-center justify-center bg-gold/10 group-hover:bg-gold/20 transition-colors">
+                  <Phone className="w-5 h-5 text-gold" />
+                </div>
+                <div>
+                  <p className="font-heading text-sm uppercase tracking-wider">Telefon</p>
+                  <p className="font-body text-dark-foreground/70">065 421 47 29</p>
+                </div>
+              </a>
+              <a
+                href={HUMANVET_MAPS_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 group"
+              >
+                <div className="w-12 h-12 flex items-center justify-center bg-gold/10 group-hover:bg-gold/20 transition-colors">
+                  <MapPin className="w-5 h-5 text-gold" />
+                </div>
+                <div>
+                  <p className="font-heading text-sm uppercase tracking-wider">Adresa</p>
+                  <p className="font-body text-dark-foreground/70">Moše Pijade 87, Bački Jarak</p>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </SectionWrapper>
+
+      <section className="bg-gold py-16">
+        <div className="container text-center">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold uppercase tracking-wider text-primary-foreground">
+            Upoznajte nas
+          </h2>
+          <p className="font-body text-lg text-primary-foreground/80 mt-4 max-w-2xl mx-auto">
+            Ako vam je bitno ko brine o psu dok vas nema, javite se. Objasnićemo pristup, uslove boravka i kako izgleda prvi trening — bez obaveze.
+          </p>
+          <Link
+            to="/kontakt"
+            className="inline-block mt-8 bg-dark px-10 py-4 font-heading text-sm uppercase tracking-widest text-dark-foreground hover:bg-dark-muted transition-colors"
+          >
+            Pošaljite upit
+          </Link>
+        </div>
+      </section>
     </>
   );
 };

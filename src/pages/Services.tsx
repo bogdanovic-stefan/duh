@@ -1,11 +1,27 @@
 import { Link } from "react-router-dom";
+import { Truck, Globe } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 import HeroSection from "@/components/HeroSection";
 import Seo from "@/components/Seo";
 import SectionWrapper from "@/components/SectionWrapper";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 import heroHome from "@/assets/hero-home.jpg";
 import serviceObedience from "@/assets/osnovna-napredna-obuka.jpg";
 import serviceSocialization from "@/assets/socijalizacija-3.jpg";
 import serviceProtection from "@/assets/napad-odbrana.jpg";
+import nasPrevoz from "@/assets/gallery/nas-prevoz.jpg";
+import kaveziZaPrevoz from "@/assets/gallery/kavezi-za-prevoz.jpg";
+
+const prevozSlides = [
+  { src: nasPrevoz, alt: "Brendirano vozilo DUH za prevoz pasa", objectPosition: "object-[center_70%]" },
+  { src: kaveziZaPrevoz, alt: "Kavezi za siguran prevoz pasa", objectPosition: "object-center" },
+];
 
 const pricingData = [
   { breed: "Mala rasa", price: "1.500", highlight: false },
@@ -39,7 +55,7 @@ const Services = () => {
     <>
       <Seo
         title="Usluge i cenovnik - DUH Dresura i pansion za pse"
-        description="Pogledajte cenovnik pansiona i programe dresure pasa u centru DUH. Socijalizacija, osnovna poslušnost i odbrana."
+        description="Pogledajte cenovnik pansiona, programe dresure i uslugu prevoza pasa u centru DUH. Socijalizacija, osnovna poslušnost, odbrana i prevoz u inostranstvo."
         path="/usluge"
       />
       <HeroSection
@@ -104,6 +120,67 @@ const Services = () => {
               </div>
             </div>
           ))}
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper id="prevoz">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold uppercase tracking-wider text-gold">
+            Prevoz pasa
+          </h2>
+          <p className="font-body text-muted-foreground mt-6 leading-relaxed">
+            Psi na pansion ili obuku mogu da stignu našim vozilom. Prevoz radimo po celoj Srbiji, a postoji i opcija za inostranstvo. Termin i relaciju dogovaramo unapred.
+          </p>
+        </div>
+
+        <div className="mt-12 max-w-5xl mx-auto px-12 md:px-16">
+          <Carousel
+            opts={{ loop: true }}
+            plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}
+          >
+            <CarouselContent>
+              {prevozSlides.map((slide) => (
+                <CarouselItem key={slide.alt}>
+                  <div className="aspect-[4/3] md:aspect-[16/10] overflow-hidden">
+                    <img
+                      src={slide.src}
+                      alt={slide.alt}
+                      loading="lazy"
+                      className={`w-full h-full object-cover ${slide.objectPosition}`}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="border-gold/30 text-gold hover:bg-gold hover:text-primary-foreground -left-6 md:-left-10" />
+            <CarouselNext className="border-gold/30 text-gold hover:bg-gold hover:text-primary-foreground -right-6 md:-right-10" />
+          </Carousel>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 max-w-5xl mx-auto">
+          <div className="border border-border p-8 hover:border-gold transition-colors">
+            <Truck className="w-9 h-9 text-gold mb-4" />
+            <h3 className="font-heading text-xl uppercase tracking-wider mb-3">Po celoj Srbiji</h3>
+            <p className="font-body text-muted-foreground leading-relaxed">
+              Preuzimamo i vraćamo psa sa vaše adrese, gde god da ste u Srbiji. Vozilo je opremljeno kavezima, a vožnju vodi neko ko zna kako se pas ponaša na putu.
+            </p>
+          </div>
+          <div className="border border-border p-8 hover:border-gold transition-colors">
+            <Globe className="w-9 h-9 text-gold mb-4" />
+            <h3 className="font-heading text-xl uppercase tracking-wider mb-3">Inostranstvo</h3>
+            <p className="font-body text-muted-foreground leading-relaxed">
+              Po dogovoru organizujemo i prevoz van granice. Recite nam destinaciju i datum — javićemo šta je moguće i šta je potrebno od dokumentacije.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center mt-10">
+          <Link
+            to="/kontakt"
+            className="inline-block bg-gold px-8 py-4 font-heading text-sm uppercase tracking-widest text-primary-foreground hover:bg-gold-dark transition-colors"
+          >
+            Zakažite prevoz
+          </Link>
         </div>
       </SectionWrapper>
 
