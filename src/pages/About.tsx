@@ -98,7 +98,7 @@ const About = () => {
               Humanvet
             </h3>
             <p className="font-body text-dark-foreground/80 leading-relaxed mt-6">
-              Pansion DUH sarađuje sa veterinarskom ambulantom Humanvet u Bačkom Jarku. Ako tokom boravka zatreba pregled ili hitna pomoć, vaš pas ide kod proverenog veterinara — u istom mestu, bez gubljenja vremena.
+            Pansion DUH sarađuje sa veterinarskom ambulantom Humanvet u Bačkom Jarku. Ako tokom boravka vašem psu zatreba pregled ili hitna pomoć, biće zbrinut kod proverenog veterinara koji je dostupan 24/7 — u istom mestu, bez gubljenja vremena.
             </p>
 
             <div className="mt-8 space-y-4">
